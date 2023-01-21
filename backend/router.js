@@ -15,7 +15,7 @@ router.get("/books",bookController.getBook)
 
 router.get("/books/:bookId",bookController.getById)
 router.put("/books/:bookId",bookController.updatebook)
-router.delete("/books/:bookId",bookController.deleteBooks)
+router.delete("/books/:id",bookController.deleteBooks)
 // ==================================== REVIEW API ===========================================//
 // router.post("/books/:bookId/review",reviewController.createReview)
 // router.put("/books/:bookId/review/:reviewId",reviewController.updateReview)

@@ -41,7 +41,6 @@ const createbook = async function (req, res) {
     if (!valid.isValid(subcategory)) {return res.status(400).json( " subcategory is required");}
     //---releasedAt---//
     if(!valid.isValid(releasedAt)){return res.status(400).json("provide releasedAt date")}
-    // if (!valid.isValidDate(releasedAt)) {return res.status(400).json(" releasedAt date should be in format=> yyyy-mm-dd");}
     //---creating data---//
     let savedData = await bookModel.create(data);
     res.status(201).json( savedData );
@@ -62,7 +61,7 @@ const getBook = async function (req, res) {
        { return res.status(400).json( "User id is not valid" );}
     }
     const returnBook = await bookModel.find()/*{ $and: [data, { isDeleted: false }] }*/
-      .select("title excerpt userId category releasedAt reviews")
+      .select("title excerpt ISBN userId author category subcategory releasedAt reviews")
       .sort({ title: 1 });
     if (returnBook.length > 0) {
       return res.status(200).json(returnBook );
