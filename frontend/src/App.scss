@@ -4,7 +4,7 @@
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
-  background-color: #404258;
+  background-color: #1d1f31;
   color: white;
   font-family: "Jost", sans-serif;
 }
@@ -275,4 +275,180 @@ $red: #fb2576;
       }
     }
   }
+
+  .dashboard {
+    .book {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 0.1em solid $pink;
+      border-radius: 1em;
+      height: 45vh;
+      gap: 0.5em;
+      margin-bottom: 1em;
+
+      h3 {
+        margin-bottom: 0.5em;
+      }
+    }
+
+    .btns {
+      display: flex;
+      flex-direction: column;
+      gap: 3em;
+      padding: 1em;
+
+      button {
+        height: 6vh;
+        width: 10vw;
+        border: 0.2em solid $red;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $red;
+          border: none;
+        }
+      }
+
+      .fa-regular {
+        font-size: x-large;
+        cursor: pointer;
+        &:hover {
+          color: rgb(36, 208, 36);
+        }
+      }
+
+      .fa-solid {
+        font-size: x-large;
+        cursor: pointer;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  .create-book {
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3em;
+
+      input {
+        height: 4vh;
+        width: 20vw;
+        border: none;
+        border-bottom: 0.1em solid white;
+      }
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        color: $red;
+      }
+
+      button {
+        height: 5vh;
+        width: 20vw;
+        margin-top: 1em;
+        background-color: $pink;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        &:hover {
+          border: none;
+          background-color: $red;
+        }
+      }
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      margin-top: 1em;
+      p {
+        color: $red;
+      }
+    }
+  }
+
+  .modalBackground {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20rem;
+    border-radius: 2rem;
+    
+        .modalContainer {
+            border: 0.2rem solid $red;
+            width: 48rem;
+            height: 22rem;
+            padding: 1rem;
+            border-radius: 2rem;
+            display: flex;
+            flex-direction: column;
+    
+            .title {
+                text-align: center;
+                margin-top: 10px;
+            }
+  
+            .titleCloseBtn {
+                display: flex;
+                justify-content: flex-end;
+    
+                button {
+                    font-size: 1rem;
+                    cursor: pointer;
+                    color: white;
+                    width: 1.8em;
+                    border: 0.1rem solid $red;
+                    border-radius: 1rem;
+                    font-weight: bolder;
+
+                    &:hover{
+                        background-color: $red;
+                    }
+                }
+            }
+  
+            .body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem;
+                text-align: center;
+            }
+
+            .footer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+            button {
+                width: 6rem;
+                height: 2.2rem;
+                margin: 10px;
+                border: none;
+                border: 0.1rem solid white;
+                color: white;
+                border-radius: 1rem;
+                font-size: 1rem;
+                cursor: pointer;
+        
+                &:hover{
+                    background-color: red;
+                    border: none;
+                }
+            }
+        }
+    }
+}
 }

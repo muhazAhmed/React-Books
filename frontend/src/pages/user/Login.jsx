@@ -45,7 +45,7 @@ const Login = () => {
             onChange={handleChange}
           />
           <div className="btn">
-            <Link to="/dashboard">
+            <Link to="/book/dashboard">
               <button onClick={handleSubmit}>Login</button>
             </Link>
             {error && <h4 style={{"color" : "#fb2576", "marginTop" : "1rem"}}>{error}</h4>}

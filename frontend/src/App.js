@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Contact from "./pages/main/Contact";
 import About from "./pages/main/About";
+import Edit from "./pages/book/Edit";
 
 function Layout() {
   return (
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
       { path: "/contact", element: <Contact /> },
       { path: "/about", element: <About /> },
       { path: "/book/create", element: <Create /> },
+      { path: "/book/edit/:id", element:  <Edit/> },
       { path: "/book/dashboard", element: <Dashboard /> },
       { path: "/book/update", element: <Update /> },
       { path: "/*", element: <PageNotFound /> },
