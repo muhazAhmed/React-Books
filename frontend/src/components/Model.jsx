@@ -49,7 +49,7 @@ function Modal({ setOpenModal, setId }) {
           >
             Cancel
           </button>
-          <Link to="/user/dashboard">
+          <Link to="/book/dashboard">
             <button  onClick={handleCombain}>Delete</button>{}
           </Link>
         </div>

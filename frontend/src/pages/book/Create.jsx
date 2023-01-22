@@ -37,7 +37,7 @@ const Create = () => {
     }));
   };
   return (
-    <div className="create-book">
+    <div className="create-book" data-aos="zoom-in">
       <form>
         <div className="form">
           <h1>Add books details</h1>

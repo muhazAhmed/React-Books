@@ -10,14 +10,14 @@ const Home = () => {
       <div className="img">
       </div>
       <div className="textHome">
-        <h1 className="home" data-name='Welcome&nbsp;to&nbsp;book&nbsp;library'>Welcome To Book Library</h1>
+        <h1 className="home" data-name='Welcome&nbsp;to&nbsp;book&nbsp;library' data-aos="zoom-out">Welcome To Book Library</h1>
         {currentUser ? (
-          <Link to="/book/dashboard">
-            <button className="home-btn">Dashboard</button>
+          <Link to="/book/dashboard" >
+            <button className="home-btn" data-aos="slide-up">Dashboard</button>
           </Link>
         ) : (
           <Link to="/register">
-            <button className="home-btn">Register</button>
+            <button className="home-btn" data-aos="slide-up">Register</button>
           </Link>
         )}
       </div>

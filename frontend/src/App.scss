@@ -383,72 +383,71 @@ $red: #fb2576;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 20rem;
     border-radius: 2rem;
-    
-        .modalContainer {
-            border: 0.2rem solid $red;
-            width: 48rem;
-            height: 22rem;
-            padding: 1rem;
-            border-radius: 2rem;
-            display: flex;
-            flex-direction: column;
-    
-            .title {
-                text-align: center;
-                margin-top: 10px;
-            }
-  
-            .titleCloseBtn {
-                display: flex;
-                justify-content: flex-end;
-    
-                button {
-                    font-size: 1rem;
-                    cursor: pointer;
-                    color: white;
-                    width: 1.8em;
-                    border: 0.1rem solid $red;
-                    border-radius: 1rem;
-                    font-weight: bolder;
 
-                    &:hover{
-                        background-color: $red;
-                    }
-                }
-            }
-  
-            .body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 1rem;
-                text-align: center;
-            }
+    .modalContainer {
+      border: 0.2rem solid $red;
+      width: 48rem;
+      height: 22rem;
+      padding: 1rem;
+      border-radius: 2rem;
+      display: flex;
+      flex-direction: column;
 
-            .footer {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-    
-            button {
-                width: 6rem;
-                height: 2.2rem;
-                margin: 10px;
-                border: none;
-                border: 0.1rem solid white;
-                color: white;
-                border-radius: 1rem;
-                font-size: 1rem;
-                cursor: pointer;
-        
-                &:hover{
-                    background-color: red;
-                    border: none;
-                }
-            }
+      .title {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .titleCloseBtn {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          font-size: 1rem;
+          cursor: pointer;
+          color: white;
+          width: 1.8em;
+          border: 0.1rem solid $red;
+          border-radius: 1rem;
+          font-weight: bolder;
+
+          &:hover {
+            background-color: $red;
+          }
         }
+      }
+
+      .body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          width: 6rem;
+          height: 2.2rem;
+          margin: 10px;
+          border: none;
+          border: 0.1rem solid white;
+          color: white;
+          border-radius: 1rem;
+          font-size: 1rem;
+          cursor: pointer;
+
+          &:hover {
+            background-color: red;
+            border: none;
+          }
+        }
+      }
     }
-}
+  }
 }
