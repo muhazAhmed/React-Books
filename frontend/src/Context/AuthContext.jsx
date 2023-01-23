@@ -10,7 +10,7 @@ export const Auth= ({children}) => {
    setCurrentUser(res.data)
   }
   const logout = async (inputs) =>{
-    await axios.post("http://localhost:8800/logout",inputs)
+    await axios.post("http://localhost:8800/logout")
     setCurrentUser(null)
    }
    useEffect(()=>{
