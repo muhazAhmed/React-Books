@@ -43,7 +43,7 @@ const Edit = () => {
 
   useEffect(() => {
     fetchBook();
-  }, []);
+  });
   return (
     <div className="create-book" data-aos="zoom-in">
       <form>
