@@ -24,7 +24,7 @@ const Navbar = () => {
             <h6>Contact Us</h6>
           </Link>
 
-          <Link to="/user/update" style={{ textDecoration: "none" }}>
+          <Link to="/user/update/:id" style={{ textDecoration: "none" }}>
             <span>{currentUser?.user.name}</span>
           </Link>
           {currentUser ? (
