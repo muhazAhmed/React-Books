@@ -41,7 +41,7 @@ const router = createBrowserRouter([
       { path: "/book/edit/:id", element:  <Edit/> },
       { path: "/book/dashboard", element: <Dashboard /> },
       { path: "/book/update", element: <Update /> },
-      { path: "/*", element: <PageNotFound /> },
+      { path: "*", element: <PageNotFound /> },
     ],
   },
 ]);
