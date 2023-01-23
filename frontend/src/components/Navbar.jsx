@@ -28,12 +28,12 @@ const Navbar = () => {
             <span>{currentUser?.user.name}</span>
           </Link>
           {currentUser ? (
-            <Link to="/login" style={{ textDecoration: "none", "fontSize" : "1em" }}>
-              <span onClick={logout}>Logout</span>
+            <Link to="/login" style={{ textDecoration: "none", "fontSize" : "1em", }}>
+              <span onClick={logout} style={{"color" : "#fb2576" }}>Logout</span>
             </Link>
           ) : (
-            <Link className="link" to="/login" style={{ textDecoration: "none", "fontSize" : "1.2em" }}>
-              Login
+            <Link className="link" to="/login" style={{ textDecoration: "none", "fontSize" : "1em" }}>
+              <span style={{"color" : "#fb2576" }}>Login</span>
             </Link>
           )}
         </div>
