@@ -1,5 +1,6 @@
 const userModel = require("../models/UserModel");
 const valid = require("../validations/validator.js");
+const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 //===========================================create user=====================================//
@@ -60,14 +61,17 @@ const createUser = async (req, res) => {
     }
 
     //--password--//
-    if (!valid.isValid(password)) {
-      return res.status(400).json("password is required");
+    if (!password) {
+      return res.status(400).json("Please enter password");
     }
-    if (!valid.isValidPassword(password)) {
+    const Passregx =
+      /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&])[a-zA-Z0-9@#$%&]{8,}$/;
+    let Password = Passregx.test(password);
+    if (!Password) {
       return res
         .status(400)
         .json(
-          "Your password must contain at least one alphabet one number minimum 8character maximum 15"
+          "Password must have atleast 1 uppercase\n, 1 lowercase, 1 special charecter\n 1 number and must consist atleast 8 charectors."
         );
     }
     if (address) {
