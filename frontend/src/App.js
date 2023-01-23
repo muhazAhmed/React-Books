@@ -7,6 +7,7 @@ import Home from "./pages/main/Home";
 import Create from "./pages/book/Create";
 import Dashboard from "./pages/book/Dashboard";
 import Update from "./pages/book/Update";
+import UpdateUser from "./pages/user/Update";
 import PageNotFound from "./pages/main/PageNotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -25,6 +26,7 @@ function Layout() {
 }
 
 const router = createBrowserRouter([
+  
   {
     path: "/",
     element: <Layout />,
@@ -34,6 +36,7 @@ const router = createBrowserRouter([
       { path: "/login", element: <Login /> },
       { path: "/contact", element: <Contact /> },
       { path: "/about", element: <About /> },
+      { path: "/user/update/:id", element:  <UpdateUser/> },
       { path: "/book/create", element: <Create /> },
       { path: "/book/edit/:id", element:  <Edit/> },
       { path: "/book/dashboard", element: <Dashboard /> },

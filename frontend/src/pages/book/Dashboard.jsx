@@ -23,9 +23,10 @@ const Dashboard = () => {
           <button data-aos="zoom-out">ADD</button>
         </Link>
       </div>
+          {modalOpen && <Modal setOpenModal={setModalOpen} />}
       {Object.entries(book).map((items) => (
         <div className="book" key={items} data-aos="slide-up">
-          {modalOpen && <Modal setOpenModal={setModalOpen} setId = {items[1]._id} />}
+          {/* {modalOpen && <Modal setOpenModal={setModalOpen} setId = {items[1]._id} />} */}
           <div className="book-container" >
             <h3>Title : {items[1].title}</h3>
             <h3>Excerpt : {items[1].excerpt}</h3>

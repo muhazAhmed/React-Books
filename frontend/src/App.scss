@@ -52,6 +52,7 @@ $red: #fb2576;
 
           &:hover {
             border-bottom: 0.2em solid $red;
+            border-top: 0.2em solid $red;
             transition: 0.3s;
             color: $pink;
           }
@@ -60,7 +61,7 @@ $red: #fb2576;
     }
   }
   .footer {
-    margin-top: 10em;
+    margin-top: 7em;
     font-family: "Secular One", sans-serif;
     display: flex;
     align-items: center;
@@ -240,7 +241,7 @@ $red: #fb2576;
 
     span {
       .span {
-        color: $red;
+        color: $pink;
       }
     }
   }
@@ -255,7 +256,7 @@ $red: #fb2576;
     .about-main {
       display: flex;
       flex-direction: column;
-      border: 0.1em solid white;
+      border: 0.1em solid $red;
       border-radius: 2em;
       margin: 1rem;
       justify-content: center;
@@ -272,6 +273,10 @@ $red: #fb2576;
         border: none;
         font-size: large;
         margin: 1rem;
+
+        &:hover{
+          color: $red;
+        }
       }
     }
   }
@@ -447,6 +452,40 @@ $red: #fb2576;
             border: none;
           }
         }
+      }
+    }
+  }
+
+  .pageNotFound {
+    img {
+      position: relative;
+      height: 49vh;
+      width: 97vw;
+    }
+
+    p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      position: absolute;
+      left: 50em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5vh;
+      width: 10vw;
+      margin-top: 1em;
+      background-color: $red;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+
+      &:hover {
+        border: none;
+        background-color: rgb(64, 215, 64);
       }
     }
   }
