@@ -23,11 +23,11 @@ const Dashboard = () => {
           <button data-aos="zoom-out">ADD</button>
         </Link>
       </div>
-          {modalOpen && <Modal setOpenModal={setModalOpen} />}
+      {modalOpen && <Modal setOpenModal={setModalOpen} />}
       {Object.entries(book).map((items) => (
         <div className="book" key={items} data-aos="slide-up">
           {/* {modalOpen && <Modal setOpenModal={setModalOpen} setId = {items[1]._id} />} */}
-          <div className="book-container" >
+          <div className="book-container">
             <h3>Title : {items[1].title}</h3>
             <h3>Excerpt : {items[1].excerpt}</h3>
             <h3>Author : {items[1].author}</h3>
@@ -37,10 +37,19 @@ const Dashboard = () => {
             <h3>ReleasedAt : {items[1].releasedAt}</h3>
           </div>
           <div className="btns">
+            <Link to={`/book/info/${items[1]._id}`}>
+              <button>More Details</button>
+            </Link>
+          </div>
+          <div className="btns">
             <Link to={`/book/edit/${items[1]._id}`}>
               <i className="fa-regular fa-pen-to-square"></i>
             </Link>
-            <Link onClick={() => { setModalOpen(true) }}>
+            <Link
+              onClick={() => {
+                setModalOpen(true);
+              }}
+            >
               <i className="fa-solid fa-trash"></i>
             </Link>
           </div>
