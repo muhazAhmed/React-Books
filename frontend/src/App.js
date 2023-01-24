@@ -8,6 +8,7 @@ import Create from "./pages/book/Create";
 import Dashboard from "./pages/book/Dashboard";
 import Update from "./pages/book/Update";
 import UpdateUser from "./pages/user/Update";
+import BookInfo from "./pages/book/Review";
 import PageNotFound from "./pages/main/PageNotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
       { path: "/user/update/:id", element:  <UpdateUser/> },
       { path: "/book/create", element: <Create /> },
       { path: "/book/edit/:id", element:  <Edit/> },
+      { path: "/book/info/:id", element:  <BookInfo/> },
       { path: "/book/dashboard", element: <Dashboard /> },
       { path: "/book/update", element: <Update /> },
       { path: "*", element: <PageNotFound /> },
